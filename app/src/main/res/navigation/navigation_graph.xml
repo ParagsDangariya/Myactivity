@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/defaultFregment">
+
+    <fragment
+        android:id="@+id/defaultFregment"
+        android:name="com.example.myactivity.defaultFregment"
+        android:label="fragment_default_fregment"
+        tools:layout="@layout/fragment_default_fregment" />
+    <fragment
+        android:id="@+id/recycleFregment"
+        android:name="com.example.myactivity.recycleFregment"
+        android:label="fragment_recycle_fregment"
+        tools:layout="@layout/fragment_recycle_fregment" >
+        <action
+            android:id="@+id/action_recycleFregment_to_detailsFregment"
+            app:destination="@id/detailsFregment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsFregment"
+        android:name="com.example.myactivity.detailsFregment"
+        android:label="fragment_details_fregment"
+        tools:layout="@layout/fragment_details_fregment" />
+</navigation>
